@@ -117,7 +117,10 @@ const OrgProfileFieldSettings = (): any => {
       <div>
         <div>
           <div>
-            <form>
+            <form onSubmit={(e)=>{
+                e.preventDefault();
+                handleSave();
+            }}>
               <div>
                 <Form.Label>{t('customFieldName')}</Form.Label>
                 <Form.Control
